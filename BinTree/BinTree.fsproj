@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="BinTree.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.fsproj" />
+    <ProjectReference Include="..\CharPics\CharPics.fsproj" />
+  </ItemGroup>
+
+</Project>

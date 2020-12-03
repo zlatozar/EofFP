@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Notes.md" />
+    <Compile Include="IOMonad.fs" />
+    <Compile Include="IOMonad2.fs" />
+    <Compile Include="MaybeIOMonad.fs" />
+  </ItemGroup>
+
+</Project>

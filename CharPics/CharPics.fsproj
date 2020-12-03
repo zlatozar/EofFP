@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Readme.md" />
+    <Compile Include="CharPics.fs" />
+    <None Include="Notes.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.fsproj" />
+  </ItemGroup>
+
+</Project>
