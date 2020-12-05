@@ -1,3 +1,36 @@
+## Design programs
+
+  The primary strategy for problem solving in the book is via analysis of the
+_structure of the input_. When the input is composite, like a record, the
+skeleton should name the available fields as likely ingredients of the solution.
+When the input has "mixed data", such as a union type, the skeleton should
+enumerate the alternatives, leading to a case analysis in the solution. When the
+input is of a recursive type, the skeleton encapsulates _structural recursion_ -
+a case analysis between the base case and the inductive case, the latter case
+entailing recursive calls. A secondary, more advanced, strategy is to use
+generative recursion, otherwise known as divide-and-conquer.
+
+  The next design recipe to consider after structural recursion, in which the
+shape of the program is determined by the shape of the input, should be
+structural co-recursion, in which the shape of the program is determined instead
+by **the shape of the output**.
+  More concretely, a function that generates "mixed output" - whether that is a
+union type, or simply a boolean—might be defined by case analysis over the
+output. A function that generates a record might be composed of subprograms that
+generate each of the fields of that record. A function that generates a
+recursive data structure from some input data might be defined with a case
+analysis as to whether the result is trivial, and for non-trivial cases with
+recursive calls to generate substructures of the result.
+
+_There are certain close analogies between the methods used for structuring data
+and the methods for structuring a program which processes that data._ Hoare
+
+_Show me your code and conceal your data structures, and I shall continue to be
+mystified. Show me your data structures, and I won’t usually need your code;
+it’ll be obvious._ Eric Raymond
+
+_program structure should be dictated by the structure of its input and output data streams_
+
 ## F# specific
 
 - The `>>` operator composes two functions, so `x |> (g >> f)` **=** `x |> g |> f = f (g x)`.
