@@ -31,6 +31,8 @@ it’ll be obvious._ Eric Raymond
 
 _program structure should be dictated by the structure of its input and output data streams_
 
+**Start program with definition of all domain types - they represent structure. Type-Driven Development!**
+
 ## F# specific
 
 - The `>>` operator composes two functions, so `x |> (g >> f)` **=** `x |> g |> f = f (g x)`.

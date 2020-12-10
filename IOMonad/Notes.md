@@ -1,3 +1,16 @@
+## Monads in a low level languages
+
+The data structure have to represent nicely the state of the program and to
+handle the ability of the program to continue. That's why we have to start from
+them. The date structure stores program context so logic is around them. In a
+high level languages we do not bother about memory structure - everything is
+virtual, but what about if we want to have monads in C? We have invent generic
+structure(kind of optimized stack) that should handle all kind of monads and to
+implement API there all common operations. They creation is bottom-up.
+My be [someone](https://github.com/koka-lang/libhandler) did it already?
+
+**All data structures are based on array (memory cells).**
+
 ## Catalog
 
 Monad Name  | Description
@@ -21,7 +34,7 @@ let bind n cont =
     | None   -> None
     | Some r -> cont r
 ```
-Notice how we pass the continuation function(cont) in and call it with the result (r).
+Notice how we pass the continuation function(`cont` parameter) in and call it with the result (`r`).
 
 ## Bind and Return notes
 

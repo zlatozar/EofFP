@@ -16,3 +16,5 @@ or with `fold` e.g.
 ```fsharp
 let link llst = rev (fold revonto [] llst)
 ```
+
+**More abstraction means more specialization**
