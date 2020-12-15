@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Notes.md" />
+    <Compile Include="Trampoline.fs" />
+    <Compile Include="BinaryTreeTest.fs" />
+  </ItemGroup>
+
+</Project>
