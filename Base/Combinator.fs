@@ -45,6 +45,7 @@ let pair a b = (a, b)
 //      In other words 'f' and 'g' are from same domain but have different ranges.
 let couple f g x = (f x, g x)
 
+/// Requires a base value and a method of combining results.
 /// FOR times DO <function> params => repeat <function> times params
 let repeat f =
     let rec rptf n x = if n = 0 then x

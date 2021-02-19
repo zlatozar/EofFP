@@ -175,6 +175,15 @@ let rec span p lst =
 
 Tip: Every recursion could be replaced by `fold`/`foldBack`!
 
+The following function `leap` does not require argument to be remembered
+when the calls are made. That's why `leap` is a tail recursive.
+```fsharp
+let leap y = if (y % 2) <> 0 then
+                 leap (y + 1)
+             else
+                 y
+```
+
 ## Input
 
 Input is one by one passed elements. One way to organize algorithms/structures is
