@@ -210,6 +210,15 @@ and (--) lst elm =
     | (b :: x), a -> if a = b then x
                      else b :: (x--a)
 
+// Another approach to permutations
+let rec distribute e = function
+  | [] -> [[e]]
+  | x::xs' as xs -> (e::xs)::[for xs in distribute e xs' -> x::xs]
+
+let rec permute = function
+  | [] -> [[]]
+  | e::xs -> List.collect (distribute e) (permute xs)
+
 /// Partitions a list ([true], [false]) according to a given predicate
 let partition pred lst =
     let rec loop l cont =
