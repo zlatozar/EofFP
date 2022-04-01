@@ -54,3 +54,6 @@ let repeat f =
     let check n = if n < 0 then error "'repeat' < 0"
                   else n
     rptf << check
+
+/// Execute function and ignore result: some code |>! printfn "%A"
+let (|>!) (a: 'A) (b: 'A -> 'B) = b a |> ignore; a
